@@ -1,3 +1,5 @@
+
+## Securing Elections: A Simple Error Detection Technique for Accurate Vote Counts
 ### Scenario
 A district in Sweden chooses a new private company to supply voting machines for the upcoming election. There are three candidates, May, Feebee, and Gracie who run for office with a total of 100,000 votes submitted. When it's time to determine the winner, they notice something strange after all the votes are tallied. The total add up to more than 100,000! They subsequently perform a recount and the total is different again. This time it *does* total 100,000. It's not immediately obvious why there was originally a miscalculation until it occurs to somebody to view the vote counts in binary.
 
@@ -36,7 +38,7 @@ $$\small\text{After Vote Recount:}$$
 
 Sure enough, there's a single mismatch for Feebee, specifically: the leftmost bit is flipped! It turns out that while vote counts were stored with sufficient mechanisms to prevent data loss, the voting machine company neglected to do any error detection. When high-energy particles and gamma radiation occasionally collide with transistors, their the internal voltage can . When disparate voting centers transmit information to a server for aggregation, they run the risk of Single Event Upsets (SEUs). 
 
-### Solution
+### Error Correction in Python
 The solution? Send a parity bit alongside each word. Check if it matches by counting the ones from its base-2 representation when it is sent and after it is received. Determine if the count is even or odd and use a 0 or 1, respectively. 
 
 The worst solution it to count every bit, which has _theta(n)_ time complexity. A better solution is to only count the number 1s.
