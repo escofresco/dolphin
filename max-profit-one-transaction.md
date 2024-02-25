@@ -62,6 +62,7 @@ def max_subarray(arr, low, high):
 * _Prevent integer overflow for_ `(lo + hi) // 2` _in_ `max_subarray` _given there is a possibility of this occurring in Python._
 * _Show your work. Provide a line-by-line walkthrough of_ `max_subarray` _solving for the array_ `[112,113,109,86,105,102,86,63,81,102,99]` _which demonstrates that verifies the function's correctness._
 * _Use the recurrence below as a basis for verification of_ `max_subarray` _and_ `max_crossing_subarray`_:_
+
 $$T(n) = \begin{cases}\Theta(1)&\text{if }n = 1\\\2T(\cfrac{n}{2}) + \Theta(n)&\text{if } n > 1\end{cases}$$
 * _Ensure the recurrence above is true_.
 
