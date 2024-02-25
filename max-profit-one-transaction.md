@@ -5,6 +5,7 @@ Suppose a new cryptocurrency is created, Psychic Coin, that provides its own fut
 
 ### A naive solution
 The most straightforward but inefficient solution is to search for the greatest positive difference between every possible pair of _`n`_ dates:
+
 $$\begin{pmatrix}n \\\ 2\end{pmatrix} = \cfrac{n^{\underline{k}}}{2!} \rightarrow \cfrac{n^2 - {\xcancel{n}}}{\xcancel{2}} \propto \Theta(n^2)$$
 
 ### A better solution
