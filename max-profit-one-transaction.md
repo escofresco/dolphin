@@ -17,7 +17,7 @@ A categorical improvement comes from the insight to apply a divide-and-conquer s
 The solution algorithm begins by finding three candidates. The input array is recursively split in half. For each half, a max subarray is computed unless the subarray has just one element. Otherwise, the potential answers are combined by deciding if a max subarray that must cross over the midpoint has a great profit than either of the two halves.
 
 
-##### Helper function to find the max subarray that necessarily overlaps `mid`
+##### Helper function to find the max subarray that necessarily overlaps _`mid`_
 ```python
 def max_crossing_subarray(arr, low, mid, high):
     left_sum = float('-inf')
