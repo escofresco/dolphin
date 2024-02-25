@@ -74,9 +74,10 @@ def parity(x):
     x ^= x >> 1
     return x & 0x1
 ```
+<br/>
 
-### Explanation Criteria
-* Demonstrate the differing applicability between the _O(k)_ and _O(log n)_ solutions.
-* Elaborate on the significance of returning `x & 0x1` instead of `x & 1` in "Solution A".
-* Compare practical and theoretical performance of both solutions to the bruce-force algorithm.
-* Derive "Solution B" from first principles.
+## _Instructions: Explanation Criteria_
+* *Demonstrate the differing applicability between the _O(k)_ and _O(log n)_ solutions.*
+* *Elaborate on the significance of returning `x & 0x1` instead of `x & 1` in "Solution A".*
+* *Compare practical and theoretical performance of both solutions to the bruce-force algorithm.*
+* *Derive "Solution B" from first principles.*
