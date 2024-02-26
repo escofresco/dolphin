@@ -5,6 +5,7 @@ Suppose a new cryptocurrency is created, Psychic Coin, that provides its own fut
 
 ### A naive solution
 The most straightforward but inefficient solution is to search for the greatest positive difference between every possible pair of _`n`_ dates:
+
 $$\begin{pmatrix}n \\\ 2\end{pmatrix} = \cfrac{n^{\underline{k}}}{2!} \rightarrow \cfrac{n^2 - {\xcancel{n}}}{\xcancel{2}} \propto \Theta(n^2)$$
 
 ### A better solution
@@ -16,7 +17,7 @@ A categorical improvement comes from the insight to apply a divide-and-conquer s
 The solution algorithm begins by finding three candidates. The input array is recursively split in half. For each half, a max subarray is computed unless the subarray has just one element. Otherwise, the potential answers are combined by deciding if a max subarray that must cross over the midpoint has a great profit than either of the two halves.
 
 
-##### Helper function to find the max subarray that necessarily overlaps `mid`
+##### Helper function to find the max subarray that necessarily overlaps _`mid`_
 ```python
 def max_crossing_subarray(arr, low, mid, high):
     left_sum = float('-inf')
@@ -62,6 +63,7 @@ def max_subarray(arr, low, high):
 * _Prevent integer overflow for_ `(lo + hi) // 2` _in_ `max_subarray` _given there is a possibility of this occurring in Python._
 * _Show your work. Provide a line-by-line walkthrough of_ `max_subarray` _solving for the array_ `[112,113,109,86,105,102,86,63,81,102,99]` _which demonstrates that verifies the function's correctness._
 * _Use the recurrence below as a basis for verification of_ `max_subarray` _and_ `max_crossing_subarray`_:_
+
 $$T(n) = \begin{cases}\Theta(1)&\text{if }n = 1\\\2T(\cfrac{n}{2}) + \Theta(n)&\text{if } n > 1\end{cases}$$
 * _Ensure the recurrence above is true_.
 
