@@ -5,7 +5,7 @@ A federal task team has been chartered to help the highway interstate system bui
 <br/>
 
 ### Instructions
-Write a Python function that accepts a list of potential highways  and returns ten highways that, when considered individually, would most reduce the albedo-metric-tons of CO<sub>2</sub> for the entire system.
+Write a Python function that reviews a list of potential highways  and returns ten highways that, when considered individually, would most reduce the albedo-metric-tons of CO<sub>2</sub> for the entire system.
 
 Each candidate consists of
 * `city_a` location,
@@ -31,11 +31,9 @@ This refers to the percentage of diffusively reflected sunlight on a road. It is
 ### Outputs:
 
   * #### _k_-most eco-friendly highway candidates, where 
-$$\tiny{\scriptsize{ \\\{ P_i\ | \forall P \ 0 \le i < k \\\} } \ \begin{cases}  \_{i=0} & \boxed{} \\\ \text{\ } \\\ \tiny{i=1} &  \boxed{ \boxed{}}  \\\ \text{\ }  \\\ \scriptsize{i=2} & \boxed{\boxed{}\ \boxed{ \boxed{}} }  \\\ \text{\ } \\\ \footnotesize{i=3} & \boxed{\boxed{}\ \boxed{ \boxed{}}\  \boxed{\boxed{}\ \boxed{ \boxed{}} \ \boxed{\boxed{}\ \boxed{ \boxed{}}\  \boxed{\boxed{}\ \boxed{ \boxed{}} }}} }  \\\ \text{\ } \\\ \small{i \leftarrow i+1} & \boxed{\boxed{}\ \boxed{ \boxed{}}\  \boxed{\boxed{}\ \boxed{ \boxed{}} \ \boxed{\boxed{}\ \boxed{ \boxed{}}\  \boxed{\boxed{}\ \boxed{ \boxed{}} \ \boxed{\boxed{}\ \boxed{ \boxed{}}\  \boxed{\boxed{}\ \boxed{ \boxed{}} \ \boxed{\boxed{}\ \boxed{ \boxed{}}\  \boxed{\boxed{}\ \boxed{ \boxed{\tiny{}}} }}} } }}} \ \boxed{\tiny{i+1}}} \\\ \text{\ }\end{cases} }$$
+$$\tiny{\scriptsize{ \\\{ P\ | \ P_{\argmin } \in0 \le i < k \\\} } \ \begin{cases}  \scriptsize{i=0} & \boxed{} \\\ \text{\ } \\\ \scriptsize{i=1} &  \boxed{ \tiny\boxed{1}}  \\\ \text{\ }  \\\ \scriptsize{i=2} &  \boxed{ \tiny\boxed{1}\ \boxed{ \tiny\boxed{2}}} \\\ \text{\ } \\\ \scriptsize{i=3} &  \boxed{ \tiny\boxed{1}\ \boxed{ \tiny\boxed{2}}\ \boxed{ \tiny\boxed{3}\ \boxed{ \tiny\boxed{3}}} \\\ \text{\ }} \\\ \text{\ }  \\\ \scriptsize{i = 4} & \boxed{ \tiny\boxed{1}\ \boxed{ \tiny\boxed{2}}\ \boxed{ \tiny\boxed{3}\ \boxed{ \tiny\boxed{3}}}\text{\ }\boxed{ \tiny\boxed{4}\ \boxed{ \tiny\boxed{4}}\ \boxed{ \tiny\boxed{4}\ \boxed{ \tiny\boxed{4}}} \\\ \text{\ }}} \\\ \text{\ } \\\ \scriptsize{i \leftarrow i+1} & \boxed{ \tiny\boxed{1}\ \boxed{ \tiny\boxed{2}}\ \boxed{ \tiny\boxed{3}\ \boxed{ \tiny\boxed{3}}}\text{\ }\boxed{ \tiny\boxed{4}\ \boxed{ \tiny\boxed{4}}\ \boxed{ \tiny\boxed{4}\ \boxed{ \tiny\boxed{4}}} \\\ \text{\ }}\ \boxed{ \tiny\boxed{i}\ \boxed{ \tiny\boxed{i}}\ \boxed{ \tiny\boxed{i}\ \boxed{ \tiny\boxed{i}}}\text{\ }\boxed{ \tiny\boxed{i}\ \boxed{ \tiny\boxed{i}}\ \boxed{ \tiny\boxed{i}\ \boxed{ \tiny\boxed{i}}} \\\ \text{\ }}\}\ \tiny\boxed{i + 1}}\end{cases} }$$ and the cost function is $${{P(C, D) = }\min }{{\underbrace{{{{\sum_\{i=0}^n}{\cfrac{C_iD_i ( 250{\frac{\text{g}}{\text{car}{\cdotp}\text{km}}}) }{1000\frac{\text{kg}}{\text{ton}}}}}}}_\{\{V_\{tons}}}} } $$
 
 <br/>
-
-
 
 ---
 <font size=1> 1. [Albedo](https://en.wikipedia.org/w/index.php?title=Albedo&oldid=1209156247) (last visited Feb. 27, 2024).</font>
