@@ -12,6 +12,20 @@ $$\text{original chain}\\\\ \ \\\\ \boxed{L}\rarr \boxed{l_0}\rarr \boxed{l_1}\r
 
 ### Robot module
 ```python
+class ListNode:
+    def __init__(self, next_node):
+        self.next = next_node
+
+def reversed_chain(head):
+    x = head
+    while x and x.next:
+        y = x.next
+        z = y.next
+        x.next = z
+        y.next = head
+        head = y
+    return head
+
 def interleaved_chain(head: ListNode) -> Optional[ListNode]:
     if not (head and head.next):
         return head
@@ -32,20 +46,6 @@ def interleaved_chain(head: ListNode) -> Optional[ListNode]:
         h2.next = h1.next
         h2 = h2_next
         h1 = h1_next
-    return head
-
-class ListNode:
-    def __init__(self, next_node):
-        self.next = next_node
-
-def reversed_chain(head):
-    x = head
-    while x and x.next:
-        y = x.next
-        z = y.next
-        x.next = z
-        y.next = head
-        head = y
     return head
 ```
 
