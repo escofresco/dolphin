@@ -5,7 +5,7 @@ In  cellular DNA, genes are not actually contiguous but instead consist of disjo
 All of this is important to know because we have a genetic algorithm that needs a granular way of imposing mutations for posterity. Loosely modeling on the rules of transcription, the solution goes like this:
 1. Represent DNA with a string of characters A, C, G, T. Our transcribe function, will take a promoter and terminator pair and locate the segment contained between them. The segment does _not_ contain any other matching promoters or terminators.
 2. The function is also given an intron which is removed from the transcription.
-3. The Rabin-Karp algorithm is used as a subroutine to locate the promoter, terminator, and interon(s). 
+3. The Rabin-Karp algorithm is used as a subroutine to locate the promoter, terminator, and interon(s) before splicing a complete gene.
 
 > ### Rabin-Carp algorithm
 > 1. Compute rolling hash codes for query string *q* of length *n* with target *t* of length *m*.
