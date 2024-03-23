@@ -2,7 +2,7 @@
 ## Background
 Consider an expression of the form 
 $$c_0\odot c_1\odot c_2 \odot c_3\odot c_4$$
-where ⊙ denotes an arithmetic operator. The expression will result in different values based on whether somes or all operators are ×, +, etc. There exists a function ƒ that determines the operators for a result and sequence of integers.
+where ⊙ denotes an arithmetic operator. The expression will result in different values based on whether some or all operators are ×, +, etc. There exists a function ƒ that determines the operators for a result and sequence of integers.
 
 For example,
 $$ƒ(\text{values}=\lang4,8,2,1\rang, \text{result}=10)=\lang+,-,×\rang$$
