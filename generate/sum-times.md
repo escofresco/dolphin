@@ -1,4 +1,4 @@
-# Some time for sum and times
+# Some time for sum times
 ## Background
 Consider an expression of the form 
 $$c_0\odot c_1\odot c_2 \odot c_3\odot c_4$$
