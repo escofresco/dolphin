@@ -24,4 +24,4 @@ def flipping_concensus(n_people, m_flips_per_person):
 ```
 
 ## Expectations
-For some reason, the result of `flipping_concensus` is never in [0, 1]. Why not? Is the prompt internally consistent but erroneous, or does the Python solution alone have an issue? 
+For some reason, the result of `flipping_concensus` is never in [0, 1]. Why not? Is the prompt internally consistent but erroneous, or does the Python solution alone have an issue? In the former case, provide the corrected analysis and program, but in the latter case provide just the correct program.
